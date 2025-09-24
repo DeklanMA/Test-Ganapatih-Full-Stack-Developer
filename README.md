@@ -1,4 +1,4 @@
-<img width="1407" height="225" alt="gambar" src="https://github.com/user-attachments/assets/aacbd7f7-9a3b-4d39-9635-2576b39f8abd" /># 📌 Newsfeed App
+# 📌 Newsfeed App
 
 Aplikasi **Newsfeed** sederhana:
 
