@@ -34,13 +34,13 @@ services:
       - app-network
 
   frontend:
-    build: ./frontend-nextjs
+    build: ./frontend-next
     container_name: newsfeed-frontend
     restart: always
     depends_on:
       - backend
     env_file:
-      - ./frontend-nextjs/.env.example
+      - ./frontend-next/.env.example
     ports:
       - "3000:3000"
     networks:
