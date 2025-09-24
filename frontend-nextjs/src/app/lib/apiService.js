@@ -66,7 +66,7 @@ const apiService = {
     return res.data;
   },
 
-  getFeed: async (page = 1, limit = 10, order = 'asc') => {
+  getFeed: async (page = 1, limit = 10, order = 'desc') => {
     try {
       const token = localStorage.getItem('access_token');
       const res = await api.get(

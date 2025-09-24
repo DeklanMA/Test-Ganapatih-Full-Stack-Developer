@@ -81,7 +81,7 @@ function LayoutContent({ children }) {
                 <circle cx="12" cy="5" r="1" />
                 <circle cx="12" cy="19" r="1" />
               </svg>
-              <div className="hidden group-hover:block absolute top-4 -left-20 mt-2 w-40 bg-white rounded-lg shadow-lg border p-2">
+              <div className="hidden group-hover:block z-[100] absolute top-4 -right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border p-2">
                 <ul className="text-sm text-gray-700">
                   <li
                     onClick={handleLogout}

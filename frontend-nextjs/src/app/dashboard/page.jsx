@@ -19,31 +19,50 @@ export default function Dashboard() {
   const router = useRouter();
   const { refreshKey } = useRefresh();
 
- const loadFeed = async (pageNum = 1, order = sort) => {
-   try {
-     setLoadingFeed(true); // ✅ mulai loading
-     const res = await apiService.getFeed(pageNum, limit, order);
-     setPosts(res.posts || []);
-     setHasMore((res.posts || []).length === limit);
-   } catch (err) {
-     if (err.response?.status === 401) {
-       try {
-         await apiService.refreshToken();
-         const res = await apiService.getFeed(pageNum, limit, order);
-         setPosts(res.posts || []);
-         setHasMore((res.posts || []).length === limit);
-       } catch {
-         localStorage.clear();
-         router.push('/');
-       }
-     } else {
-       setError('Tidak bisa memuat feed');
-     }
-   } finally {
-     setLoadingFeed(false); // ✅ selesai loading
-   }
- };
 
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const MIN_LOAD_MS = 500;
+
+
+  const loadFeed = async (pageNum = 1, order = sort) => {
+    const start = Date.now();
+    try {
+      setLoadingFeed(true);
+
+      // panggilan utama
+      const doFetch = async () => {
+        const res = await apiService.getFeed(pageNum, limit, order);
+        setPosts(res.posts || []);
+        setHasMore((res.posts || []).length === limit);
+      };
+
+      try {
+        await doFetch();
+      } catch (err) {
+        if (err?.response?.status === 401) {
+          try {
+            await apiService.refreshToken();
+            await doFetch();
+          } catch {
+
+            localStorage.clear();
+            router.push('/');
+            return;
+          }
+        } else {
+          throw err;
+        }
+      }
+    } catch (err) {
+      setError('Tidak bisa memuat feed');
+      console.error('loadFeed error:', err);
+    } finally {
+      const elapsed = Date.now() - start;
+      const remain = Math.max(0, MIN_LOAD_MS - elapsed);
+      await sleep(remain); // <-- delay minimal 3 detik
+      setLoadingFeed(false);
+    }
+  };
 
   useEffect(() => {
     const token = localStorage.getItem('access_token');
@@ -144,7 +163,10 @@ export default function Dashboard() {
       <div>
         <div>
           {loadingFeed ? (
-            <div role="status" className='flex justify-center items-center w-full mt-10'>
+            <div
+              role="status"
+              className="flex justify-center items-center w-full mt-10"
+            >
               <svg
                 aria-hidden="true"
                 className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
