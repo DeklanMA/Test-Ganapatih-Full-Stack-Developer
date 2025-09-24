@@ -72,7 +72,7 @@ cd Take-Home-Test
 
 cd backend-golang
 go mod tidy
-go mod vendor    # penting untuk build di lingkungan jaringan ketat/offline
+go mod vendor    
 cd ..
 ```
 
