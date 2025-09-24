@@ -144,7 +144,7 @@ docker compose up --build
 
 <img width="1405" height="277" alt="{02CDBBF5-D325-4AEA-8960-64854BF85089}" src="https://github.com/user-attachments/assets/a609bd55-f9dc-4e54-8afb-eb32243b9b4d" />
 
-4. **Get Feed (default asc)**
+4. **Get Feed (default dsc)**
 
 <img width="1430" height="460" alt="{A899A502-385A-4A25-B2EB-3759CF028CBD}" src="https://github.com/user-attachments/assets/5a454069-7efc-48f9-a426-13c468a52aed" />
 
@@ -243,7 +243,7 @@ docker compose up --build
 
   * `page` (default 1)
   * `limit` (default 10)
-  * `order` (`asc` | `desc`, default `asc`)
+  * `order` (`asc` | `desc`, default `dsc`)
 * **Catatan:** Feed berisi **post milik sendiri** + **post user yang di-follow**.
 * **200 Response:**
 
