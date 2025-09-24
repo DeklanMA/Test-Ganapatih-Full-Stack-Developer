@@ -76,7 +76,7 @@ go mod vendor
 cd ..
 ```
 
-### 2) Jalankan dengan Docker Compose
+### 2) Jalankan dengan Docker Compose (docker harus running terlebih dahulu)
 
 ```bash
 docker compose up --build
