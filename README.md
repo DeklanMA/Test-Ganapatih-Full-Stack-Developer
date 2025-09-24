@@ -68,7 +68,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8080/api
 
 ```bash
 git clone <url-repo>
-cd Take-Home-Test
+cd Test-Ganapatih-Full-Stack-Developer'
 
 cd backend-golang
 go mod tidy
