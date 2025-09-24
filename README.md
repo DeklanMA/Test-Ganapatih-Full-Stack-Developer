@@ -1,4 +1,4 @@
-# 📌 Newsfeed App
+<img width="1407" height="225" alt="gambar" src="https://github.com/user-attachments/assets/aacbd7f7-9a3b-4d39-9635-2576b39f8abd" /># 📌 Newsfeed App
 
 Aplikasi **Newsfeed** sederhana:
 
@@ -131,41 +131,44 @@ docker compose up --build
 
 2. **Login**
 
-```bash
 <img width="1399" height="263" alt="{225EF8A3-DE9A-4B24-A27D-336CB59F703E}" src="https://github.com/user-attachments/assets/98546b3d-838a-4f14-aad9-a6fdd2903f8c" />
 
-```
+<img width="1406" height="251" alt="{438A06BA-E696-4DFE-9D6B-A25729F35B58}" src="https://github.com/user-attachments/assets/55befc22-d98b-497d-a3d1-e170f4cd1152" />
+
+<img width="1401" height="351" alt="{64DF3180-1CE1-40C8-A29F-E6E6645F90C3}" src="https://github.com/user-attachments/assets/87304ecb-6488-4d2f-b62a-72c49a386e9d" />
+
 
 3. **Create Post**
 
-```bash
-http -f POST :8080/api/posts content='Halo dunia' "Authorization:Bearer <access_token>"
-```
+<img width="1409" height="302" alt="{69FF7747-D87F-4A0B-8B33-AF38B285E018}" src="https://github.com/user-attachments/assets/3defaea6-b5e0-40da-b2d1-9b9d35eaa8c3" />
 
-4. **Get Feed (default DESC)**
+<img width="1405" height="277" alt="{02CDBBF5-D325-4AEA-8960-64854BF85089}" src="https://github.com/user-attachments/assets/a609bd55-f9dc-4e54-8afb-eb32243b9b4d" />
 
-```bash
-http GET ":8080/api/feed?page=1&limit=10&order=desc" "Authorization:Bearer <access_token>"
-```
+4. **Get Feed (default asc)**
+
+<img width="1430" height="460" alt="{A899A502-385A-4A25-B2EB-3759CF028CBD}" src="https://github.com/user-attachments/assets/5a454069-7efc-48f9-a426-13c468a52aed" />
 
 5. **Suggested Users**
 
-```bash
-http GET :8080/api/users/suggested "Authorization:Bearer <access_token>"
-```
+<img width="1376" height="905" alt="{22DF9EC3-05E9-4439-B9B7-9A7C33884D2A}" src="https://github.com/user-attachments/assets/71914e6a-c89e-401b-a750-266c32a45a66" />
+
 
 6. **Follow / Unfollow**
 
-```bash
-http POST :8080/api/follow/2 "Authorization:Bearer <access_token>"
-http DELETE :8080/api/follow/2 "Authorization:Bearer <access_token>"
-```
+**Follow**
+<img width="1406" height="334" alt="{3473D009-F0DF-4A79-9F50-D0B8AF7874EC}" src="https://github.com/user-attachments/assets/e177a963-830a-4b05-9c09-d151d7fdeb01" />
+
+**unfollow**
+<img width="1407" height="341" alt="{C989A186-F822-4317-8F42-2C0CAEA16A3F}" src="https://github.com/user-attachments/assets/671309b9-5a62-4499-a3c1-ef108a845100" />
+
 
 7. **Refresh Token**
 
-```bash
-http -f POST :8080/api/refresh refresh_token=<refresh_token>
-```
+<img width="1425" height="296" alt="{AC9BE210-2C22-479E-9A49-98D17E011589}" src="https://github.com/user-attachments/assets/cef415aa-0628-4b31-8d42-95d5fa577857" />
+
+<img width="1416" height="287" alt="{95CF77D0-541B-4872-9950-CA7B910F2202}" src="https://github.com/user-attachments/assets/977f5a43-f41b-4b15-945d-9ce664566ece" />
+
+
 
 ---
 
