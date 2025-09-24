@@ -33,13 +33,7 @@ Aplikasi **Newsfeed** sederhana:
 ├─ db/
 │  └─ init.sql
 └─ docker-compose.yml
-```
 
-> **Catatan Git (penting):**
-> Jangan jadikan `frontend-nextjs` sebagai repo Git ter-embed. Jika terlanjur ada `.git` di dalam `frontend-nextjs`, hapus:
-> `rm -rf frontend-nextjs/.git && git add -A && git commit -m "Fix nested git repo"`
-
----
 
 ## ⚙️ Environment
 
