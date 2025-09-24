@@ -120,15 +120,20 @@ docker compose up --build
 
 1. **Register**
 
-```bash
-http POST :8080/api/register Username=tester Password=secret123
-```
+<img width="1382" height="305" alt="gambar" src="https://github.com/user-attachments/assets/627c87af-3244-4282-b42d-19f4c52d2e56" />
+
+<img width="1384" height="267" alt="{72D50A56-0941-45FF-BB16-5791061FD63E}" src="https://github.com/user-attachments/assets/873bcb6c-d386-4498-bd4c-b6f24e885145" />
+
+<img width="1360" height="289" alt="{1A7A65E9-AD17-488F-B760-20C612D77182}" src="https://github.com/user-attachments/assets/39c511fc-f260-463f-80df-5c6fdfd122ca" />
+
+
+
 
 2. **Login**
 
 ```bash
-http -f POST :8080/api/login Username=tester Password=secret123
-# Simpan access_token & refresh_token dari response
+<img width="1399" height="263" alt="{225EF8A3-DE9A-4B24-A27D-336CB59F703E}" src="https://github.com/user-attachments/assets/98546b3d-838a-4f14-aad9-a6fdd2903f8c" />
+
 ```
 
 3. **Create Post**
